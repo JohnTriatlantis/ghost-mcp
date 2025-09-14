@@ -4,8 +4,9 @@
     "description": "MCP server for using the Ghost API",
     "main": "build/server.js",
     "bin": {
-        "ghost-mcp": "build/server.js"
-    },
+    "ghost-mcp": "./dist/index.js",
+    "ghost-mcp-readonly": "./dist/content-api-index.js"
+},
     "files": [
         "build/"
     ],
