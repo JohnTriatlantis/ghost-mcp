@@ -2,10 +2,10 @@
     "name": "@fanyangmeng/ghost-mcp-readonly",
     "version": "0.2.0",
     "description": "Read-only MCP server for Ghost Content API",
-    "main": "build/index.js",
+    "main": "src/index.ts",
     "bin": {
-        "ghost-mcp-readonly": "./build/index.js"
-    },
+    "ghost-mcp-readonly": "./src/index.ts"
+},
     "files": [
         "build/"
     ],
