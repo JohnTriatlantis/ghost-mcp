@@ -1,39 +1,33 @@
 {
-    "name": "@fanyangmeng/ghost-mcp",
-    "version": "0.1.0",
-    "description": "MCP server for using the Ghost API",
-    "main": "build/server.js",
+    "name": "@fanyangmeng/ghost-mcp-readonly",
+    "version": "0.2.0",
+    "description": "Read-only MCP server for Ghost Content API",
+    "main": "build/index.js",
     "bin": {
-    "ghost-mcp": "./dist/index.js",
-    "ghost-mcp-readonly": "./dist/content-api-index.js"
-},
+        "ghost-mcp-readonly": "./build/index.js"
+    },
     "files": [
         "build/"
     ],
     "scripts": {
-    "build": "tsc",
-    "build:content": "tsc src/content-api-index.ts --outDir dist",
-    "start": "node build/server.js",
-    "start:content": "node dist/content-api-index.js",
-    "prepare": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
-},
+        "build": "tsc",
+        "start": "node build/index.js",
+        "prepare": "npm run build",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
     "publishConfig": {
         "access": "public"
     },
-    "keywords": [],
+    "keywords": ["ghost", "mcp", "content-api", "readonly"],
     "author": "Fanyang Meng (https://mfydev.link)",
     "license": "ISC",
     "type": "commonjs",
     "dependencies": {
-        "@tryghost/content-api": "^1.12.0",
         "@modelcontextprotocol/sdk": "^1.10.1",
-        "@tryghost/admin-api": "^1.13.13",
-        "axios": "^1.8.4",
+        "@tryghost/content-api": "^1.12.0",
         "zod": "^3.24.3"
     },
     "devDependencies": {
-        "@types/axios": "^0.9.36",
         "@types/node": "^22.14.1",
         "typescript": "^5.8.3"
     }
